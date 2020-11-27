@@ -18,7 +18,7 @@ namespace WebApplication3.Controllers
                 new Animal(1, "Emilija", 5),
                 new Animal(2, "Kristina", 7),
                 new Animal(3, "Stefan", 3),
-                new Animal(4, "Gjoko", 8)
+               
             };
         }
 
@@ -31,7 +31,7 @@ namespace WebApplication3.Controllers
         [HttpPost]
         public ActionResult Index(string newAnimalName, int newAnimalAge)
         {
-            Animals.Add(new Animal(5, newAnimalName, newAnimalAge));
+            Animals.Add(new Animal(4, newAnimalName, newAnimalAge));
             return View(Animals);
         }
 
