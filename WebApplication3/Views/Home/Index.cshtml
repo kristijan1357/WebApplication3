@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebApplication3.Models.Animal>
+
+@{
+
+    ViewBag.Title = "Home Page";
+}
+<cshtml>
+
+    @foreach(var animal in Model)
+    {
+        <div>
+            <p>
+                This is an animal with name: @animal.Name and age: @animal.Age
+            </p>
+            <div>
+                @using (Html.BeginForm("Delete", "Home", new { animalToDelete = animal.Name }))
+                {
+                    <input type="submit" value="Delete" />
+                }
+            </div>
+        </div>
+    }
+
+    <div>
+        <form action="/Home/Index" method="post">
+            <input name="newAnimalName" type="text" placeholder="Insert the name of the new animal" />
+            <input name="newAnimalAge" type="int" placeholder="Insert the age of the new animal" />
+            <input type="submit" name="btnSubmit" value="Insert animal" />
+        </form>
+
+    </div>
+
+</cshtml>
