@@ -10,7 +10,7 @@ namespace WebApplication3.Controllers
     public class HomeController : Controller
     {
         public List<Animal> Animals { get; set; }
-
+        /*Komentar ostaven od Nikola Vasilevski */
         public HomeController()
         {
             Animals = new List<Animal>()
@@ -19,7 +19,7 @@ namespace WebApplication3.Controllers
                 new Animal(2, "Kristina", 7),
                 new Animal(3, "Stefan", 3),
                 new Animal(4, "Sara", 9)
-               
+
             };
         }
 
